@@ -450,7 +450,7 @@ class DrupalApacheSolrService implements DrupalApacheSolrServiceInterface {
           '%line' => $caller['line'],
           '%file' => $caller['file'],
         ),
-        WATCHDOG_ERROR
+        WATCHDOG_WARNING
       );
       throw new Exception('HTTP ' . $code . '; ' . $response->status_message);
     }
