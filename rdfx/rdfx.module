@@ -385,7 +385,7 @@ function rdfx_resource_uri($type, $entity) {
   $base_uri = "http://data.landportal.info"; // hard-coded for Land Library (for now, TODO: make it configurable)
   list(, , $bundle) = entity_extract_ids($type, $entity);
 	if ($type == "taxonomy_vocabulary") {
-  	  $localURI = $base_uri . "/vocabulary/" . $bundle;
+  	  $localURI = $base_uri . "/vocabulary/" . $entity->vid;
   }
   elseif ($type == "taxonomy_term") {
     switch ($bundle) {
