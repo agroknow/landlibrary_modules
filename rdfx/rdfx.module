@@ -394,6 +394,7 @@ function rdfx_resource_uri($type, $entity) {
         $uuid = $uuids[$entity->tid]; 
   	    $localURI = $base_uri . "/country/" . $uuid;
         break;
+      case "landportal_topics":
       case "topics":
         $uuids = entity_get_uuid_by_id($type, array($entity->tid)); 
         $uuid = $uuids[$entity->tid]; 
