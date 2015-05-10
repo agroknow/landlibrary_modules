@@ -211,9 +211,9 @@ function rdfx_get_rdf_model($type, $data) {
 function rdfx_property_access_filter($wrapper) {
   $filtered = array();
   foreach ($wrapper as $name => $property) {
-    if ($property->access('view')) {
+//    if ($property->access('view')) {
       $filtered[$name] = $property;
-    }
+//    }
   }
   return $filtered;
 }
@@ -298,7 +298,7 @@ function rdfx_add_resource(&$index, $uri, $property, EntityMetadataWrapper $wrap
     $predicates = rdfx_get_predicates($wrapper, $name);
     foreach ($predicates as $predicate) {
      if ($property->value() && $property->value() != "") {
-       if (!preg_match('/\S/', $property->value()))
+     //  if (!preg_match('/\S/', $property->value()))
           $index[$uri][$predicate][] = $property->value();
      }
      else
